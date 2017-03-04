@@ -12,6 +12,7 @@ Things I learn from making this app:
 - Redux: store, state, binding React components to the redux store
 - Actions / reducers
 - React-Bootraps
+- Using factory function to make Component classes of the same behavior and properties
 
 ## Prerequisite
 node
