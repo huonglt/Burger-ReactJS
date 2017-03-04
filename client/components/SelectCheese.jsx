@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectTitle from './SelectTitle.jsx';
-import Cheese from './Cheese.jsx';
+import { Cheese } from '../hoc/hocFactory.jsx';
 import { CHEESES } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
 
@@ -29,7 +29,7 @@ export default class SelectCheese extends React.Component {
         <SelectTitle title="Select Cheese"/>
           <div className="row">
           {
-            CHEESES.map((cheese, index) => <Cheese isSelected={this.props.order.cheese === cheese.name} selectCheese={this.selectCheese} key={index} {...cheese}/>)
+            CHEESES.map((cheese, index) => <Cheese isSelected={this.props.order.cheese === cheese.name} clickHandler={this.selectCheese} key={index} {...cheese}/>)
           }
           </div>
           <NextBack showNext={true} showBack={true} nextHandler={this.next} backHandler={this.back}/>

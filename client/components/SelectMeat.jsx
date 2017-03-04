@@ -1,5 +1,5 @@
 import React from 'react';
-import Meat from './Meat.jsx';
+import { Meat } from '../hoc/hocFactory.jsx';
 import { MEATS } from '../redux/dataList.js';
 import SelectTitle from './SelectTitle.jsx';
 import NextBack from './NextBack.jsx';
@@ -29,7 +29,7 @@ export default class SelectMeat extends React.Component {
         <SelectTitle title="Select Meat"/>
         <div className="row">
         {
-          MEATS.map((meat, index) => <Meat key={index} isSelected={this.props.order.meat === meat.name} selectMeat={this.selectMeat} {...meat}/>)
+          MEATS.map((meat, index) => <Meat key={index} isSelected={this.props.order.meat === meat.name} clickHandler={this.selectMeat} {...meat}/>)
         }
         </div>
       <NextBack showNext={true} showBack={true} nextHandler={this.next} backHandler={this.back}/>
