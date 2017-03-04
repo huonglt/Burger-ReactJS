@@ -1,0 +1,178 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+div.stepHeader, button.burgerText, label.burgerText {
+  font-size:14px;
+  line-height:20px;
+  color:rgb(119, 119, 119);
+  font-weight: normal;
+}
+
+div.spacingBottom {
+  margin-bottom:30px;
+}
+div.choiceBurgerLeft {
+  display:table;
+  margin-bottom:30px;
+}
+
+div.choiceBurgerRight {
+  display:table-cell;
+  vertical-align:top;
+  align:right;
+  float:none;
+}
+div.centerAlign {
+  text-align:center;
+}
+div.burgerItem {
+  cursor: pointer;
+}
+
+.unstyleList {
+  list-style-type: none;
+}
+
+.burgerButton {
+  width: 100px;
+}
+div.burgerItem:hover {
+  background-color: rgb(230, 230, 230);
+
+}
+
+div.burgerItem:active {
+  background-color: rgb(230, 230, 230);
+}
+div.selectedItem {
+  background-color: rgb(230, 230, 230);
+}
+
+div.burgerColSpace {
+  margin-left:10px;
+  margin-right:10px;
+  /*margin-bottom:10px;*/
+  padding-bottom:10px;
+  margin-top:10px;
+}
+
+div.nextStepRow {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+a.nextStepText {
+  width:100px;
+  font-size:14px;
+  line-height:1;
+}
+.stepBox {
+  background-color: rgb(16, 108, 200);
+  /*background-color: #f8f8f8;*/
+  /*border: 1px solid #ccc;*/
+  border: 1px solid #e7e7e7;
+  color: #ccc;
+  cursor:pointer;
+  height:40px;
+  vertical-align: middle;
+  display: table-cell;
+  float: none;
+}
+
+.stepBoxActive {
+  background-color: #5cb85c;
+}
+.stepBox:hover {
+  background-color: #5cb85c;
+}
+
+.stepHeading {
+   margin-bottom: 10px;
+   padding-bottom: 10px;
+   border-bottom: 1px solid #ccc;
+}
+
+div.navButtons {
+  text-align: center;
+  width:100%;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
