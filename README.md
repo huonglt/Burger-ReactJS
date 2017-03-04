@@ -15,10 +15,14 @@ Things I learn from making this app:
 - Using factory function to make Component classes of the same behavior and properties
 
 ## Prerequisite
-node
-yarn
+node & yarn preinstalled
 
-## To install dependencies
+- brew install node
+- brew install yarn
+
+I'm using node v7.5.0, yarn v0.20.3
+
+## Install dependencies before you start
 yarn install
 
 ## To start
