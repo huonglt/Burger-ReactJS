@@ -10,7 +10,7 @@ export default class About extends React.Component {
         </div>
         <div className="row center-xs middle-xs">
           <div className="col-xs-12 col-md-6 col-md-offset-3">
-            <Link className="btn btn-lg btn-block btn-success" to="/Burger/Bun">About This App</Link>
+            <Link className="btn btn-lg btn-block btn-success" to="/Burger/Bun">Start Playing</Link>
           </div>
         </div>
       </div>
