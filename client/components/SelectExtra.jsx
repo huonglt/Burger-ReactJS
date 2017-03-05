@@ -3,7 +3,7 @@ import SelectTitle from './SelectTitle.jsx';
 import { EXTRAS } from '../redux/dataList.js';
 import Extra from './Extra.jsx';
 import NextBack from './NextBack.jsx';
-
+import { browserHistory } from 'react-router';
 export default class SelectExtra extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ export default class SelectExtra extends React.Component {
   }
   back() {
     this.props.selectStep('Salad');
-    this.props.router.push('Burger/Salad');
+    browserHistory.push('/Burger/Salad');
   }
   render() {
     return (

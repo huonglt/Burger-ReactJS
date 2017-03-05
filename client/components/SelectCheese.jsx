@@ -3,7 +3,7 @@ import SelectTitle from './SelectTitle.jsx';
 import { Cheese } from '../hoc/hocFactory.jsx';
 import { CHEESES } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
-
+import { browserHistory } from 'react-router';
 export default class SelectCheese extends React.Component {
   constructor(props) {
     super(props);
@@ -17,11 +17,11 @@ export default class SelectCheese extends React.Component {
   }
   next() {
     this.props.selectStep('Salad');
-    this.props.router.push('Burger/Salad');
+    browserHistory.push('/Burger/Salad');
   }
   back() {
     this.props.selectStep('Meat');
-    this.props.router.push('Burger/Meat');
+    browserHistory.push('/Burger/Meat');
   }
   render() {
     return (

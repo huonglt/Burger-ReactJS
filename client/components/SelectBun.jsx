@@ -3,7 +3,7 @@ import Bun from './Bun.jsx';
 import { BUNS } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
 import SelectTitle from './SelectTitle.jsx';
-
+import { browserHistory } from 'react-router';
 export default class SelectBun extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +16,7 @@ export default class SelectBun extends React.Component {
   }
   next(event) {
     this.props.selectStep('Meat');
-    this.props.router.push('Burger/Meat');
+    browserHistory.push('/Burger/Meat');
   }
   render() {
 

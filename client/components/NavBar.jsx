@@ -8,7 +8,7 @@ export default class NavBar extends React.Component {
         <div>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="About">About This App</Link>
+            <Link to="/About">About This App</Link>
           </Navbar.Brand>
         </Navbar.Header>
         <Navbar.Text pullRight>

@@ -3,6 +3,7 @@ import SelectTitle from './SelectTitle.jsx';
 import { SALADS } from '../redux/dataList.js';
 import Salad from './Salad.jsx';
 import NextBack from './NextBack.jsx';
+import { browserHistory } from 'react-router';
 
 export default class SelectSalad extends React.Component {
   constructor(props) {
@@ -21,11 +22,11 @@ export default class SelectSalad extends React.Component {
   }
   next() {
     this.props.selectStep('Extra');
-    this.props.router.push('Burger/Extra');
+    browserHistory.push('/Burger/Extra');
   }
   back() {
     this.props.selectStep('Cheese');
-    this.props.router.push('Burger/Cheese');
+    browserHistory.push('/Burger/Cheese');
   }
 
   isChecked(saladName) {

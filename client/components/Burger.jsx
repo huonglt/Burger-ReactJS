@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonBar from './ButtonBar.jsx';
 import Order from './Order.jsx';
 import _isEmpty from 'lodash.isempty';
+import { browserHistory } from 'react-router';
 
 export default class Burger extends React.Component {
   constructor(props) {
@@ -13,15 +14,15 @@ export default class Burger extends React.Component {
 
   handleClick(event) {
     this.props.selectStep(event.target.name);
-    this.props.router.push('/Burger/' + event.target.name);
+    browserHistory.push('/Burger/' + event.target.name);
   }
   completeOrder() {
     this.props.selectStep('Complete');
-    this.props.router.push('/Burger/Complete');
+    browserHistory.push('/Burger/Complete');
   }
   startOver() {
     this.props.startOver();
-    this.props.router.push('/Burger/Bun');
+    browserHistory.push('/Burger/Bun');
   }
   render() {
     let order = this.props.order;
