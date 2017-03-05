@@ -7,8 +7,9 @@ The test module for this app will be added later.
 Things I learn from making this app:
 - ReactJS components: Functional components & class components
 - Type checking for React Components
+- Routing with browser history
 - JSX syntax
-- ES6: modules, export, const / let, Array new methods, arrow functions
+- ES6: modules, export, const / let, new Array methods, arrow functions
 - Redux: store, state, binding React components to the redux store
 - Actions / reducers
 - React-Bootraps
