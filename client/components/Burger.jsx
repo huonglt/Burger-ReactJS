@@ -17,7 +17,7 @@ export default class Burger extends React.Component {
     browserHistory.push('/Burger/' + event.target.name);
   }
   completeOrder() {
-    this.props.selectStep('Complete');
+    this.props.completeOrder();
     browserHistory.push('/Burger/Complete');
   }
   startOver() {
