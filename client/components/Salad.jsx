@@ -16,8 +16,6 @@ export default class Salad extends React.Component {
       this.props.unselectSalad(saladName);
     }
   }
-
-
   render() {
     let { name, img, isChecked } = this.props;
     return (

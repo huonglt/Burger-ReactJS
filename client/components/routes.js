@@ -10,8 +10,6 @@ import { SelectCheeseContainer } from '../containers/SelectCheeseContainer.jsx';
 import { SelectSaladContainer } from '../containers/SelectSaladContainer.jsx';
 import { SelectExtraContainer } from '../containers/SelectExtraContainer.jsx';
 import { CompleteOrderContainer } from '../containers/CompleteOrderContainer.jsx';
-
-
 export default (
     <Router history={browserHistory}>
       <Route path="/" component={App}>

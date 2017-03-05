@@ -22,7 +22,6 @@ export default class SelectBun extends React.Component {
     browserHistory.push('/Burger/Meat');
   }
   render() {
-
     return (
       <div className="stepHeader">
         <SelectTitle title="Select bun"/>
