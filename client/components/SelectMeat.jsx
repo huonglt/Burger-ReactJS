@@ -10,6 +10,7 @@ export default class SelectMeat extends React.Component {
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
     this.selectMeat = this.selectMeat.bind(this);
+    this.props.selectStep('Meat');
   }
   next(event) {
     this.props.selectStep('Cheese');

@@ -11,6 +11,7 @@ export default class SelectExtra extends React.Component {
     this.unselectExtra = this.unselectExtra.bind(this);
     this.isChecked = this.isChecked.bind(this);
     this.back = this.back.bind(this);
+    this.props.selectStep('Extra');
   }
   selectExtra(extraName) {
     this.props.selectExtra(extraName);

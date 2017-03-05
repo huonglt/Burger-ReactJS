@@ -9,6 +9,8 @@ export default class SelectBun extends React.Component {
     super(props);
     this.selectBun = this.selectBun.bind(this);
     this.next = this.next.bind(this);
+
+    this.props.selectStep('Bun');
   }
   selectBun(name) {
     this.props.selectBun(name);

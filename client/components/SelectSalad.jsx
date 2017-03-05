@@ -13,6 +13,7 @@ export default class SelectSalad extends React.Component {
     this.next = this.next.bind(this);
     this.back = this.back.bind(this);
     this.isChecked = this.isChecked.bind(this);
+    this.props.selectStep('Salad');
   }
   selectSalad(saladName) {
     this.props.selectSalad(saladName);
