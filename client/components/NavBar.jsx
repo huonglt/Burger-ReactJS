@@ -12,13 +12,10 @@ export default class NavBar extends React.Component {
           </Navbar.Brand>
         </Navbar.Header>
         <Navbar.Text pullRight>
-        <Link to="/Burger/Bun" style={{textDecoration: 'none', color: '#5e5e5e'}}>Burger Play</Link>
-
-      </Navbar.Text>
-
+          <Link to="/Burger/Bun" style={{textDecoration: 'none', color: '#5e5e5e'}}>Burger Play</Link>
+        </Navbar.Text>
         </div>
       </Navbar>
     );
   }
-
 }
