@@ -16,7 +16,6 @@ export default class SelectBun extends React.Component {
     this.next();
   }
   next(event) {
-    this.props.selectStep('Meat');
     browserHistory.push('/Burger/Meat');
   }
   render() {

@@ -24,7 +24,6 @@ export default class SelectExtra extends React.Component {
     return (extras && extras.find(extra => extra == extraName));
   }
   back() {
-    this.props.selectStep('Salad');
     browserHistory.push('/Burger/Salad');
   }
   render() {

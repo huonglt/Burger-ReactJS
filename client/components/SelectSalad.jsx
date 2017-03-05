@@ -22,11 +22,9 @@ export default class SelectSalad extends React.Component {
     this.props.unselectSalad(saladName);
   }
   next() {
-    this.props.selectStep('Extra');
     browserHistory.push('/Burger/Extra');
   }
   back() {
-    this.props.selectStep('Cheese');
     browserHistory.push('/Burger/Cheese');
   }
 

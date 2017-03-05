@@ -13,11 +13,9 @@ export default class SelectMeat extends React.Component {
     this.props.selectStep('Meat');
   }
   next(event) {
-    this.props.selectStep('Cheese');
     browserHistory.push('/Burger/Cheese');
   }
   back(event) {
-    this.props.selectStep('Bun');
     browserHistory.push('/Burger/Bun');
   }
   selectMeat(meatName) {
