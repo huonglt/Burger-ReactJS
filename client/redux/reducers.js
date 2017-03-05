@@ -1,7 +1,7 @@
 import { handleActions } from 'redux-actions';
 import { SELECT_BUN, SELECT_STEP, SELECT_MEAT, SELECT_CHEESE, SELECT_SALAD, UNSELECT_SALAD, SELECT_EXTRA, UNSELECT_EXTRA, START_OVER } from './actions.js';
 
-const initialState = { order: {}, currentStep: 'Bun'};
+const initialState = { order: {}, currentStep: ''};
 
 export const reducers = (state = initialState, action) => {
   switch(action.type) {
