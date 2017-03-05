@@ -3,6 +3,7 @@ import Order from './Order.jsx';
 export default class CompleteOrder extends React.Component {
   constructor(props) {
     super(props);
+    this.props.selectStep('Complete');
   }
   render() {
     let order = this.props.order;
