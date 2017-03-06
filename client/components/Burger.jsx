@@ -2,8 +2,7 @@ import React from 'react';
 import ButtonBar from './ButtonBar.jsx';
 import Order from './Order.jsx';
 import _isEmpty from 'lodash.isempty';
-import { browserHistory } from 'react-router';
-
+import { findRoutePath, changeToRoute, STEP_COMPLETE, STEP_START_OVER } from '../utils/common.js';
 export default class Burger extends React.Component {
   constructor(props) {
     super(props);
@@ -13,16 +12,17 @@ export default class Burger extends React.Component {
   }
 
   handleClick(event) {
-    this.props.selectStep(event.target.name);
-    browserHistory.push('/Burger/' + event.target.name);
+    let stepName = event.target.name;
+    this.props.selectStep(stepName);
+    changeToRoute(stepName);
   }
   completeOrder() {
     this.props.completeOrder();
-    browserHistory.push('/Burger/Complete');
+    changeToRoute(STEP_COMPLETE);
   }
   startOver() {
     this.props.startOver();
-    browserHistory.push('/Burger/Bun');
+    changeToRoute(STEP_START_OVER);
   }
   render() {
     let order = this.props.order;
@@ -34,7 +34,7 @@ export default class Burger extends React.Component {
           <span className="glyphicon glyphicon-cutlery"> Select each ingredient below to build your own awesome burger!!!</span>
         </div>
         {
-          (!_isEmpty(order) && currentStep != 'Complete') && <Order {...order} showOrderButtonBar={true} startOver={this.startOver} completeOrder={this.completeOrder}/>
+          (!_isEmpty(order) && currentStep != STEP_COMPLETE) && <Order {...order} showOrderButtonBar={true} startOver={this.startOver} completeOrder={this.completeOrder}/>
         }
         <ButtonBar currentStep={currentStep} handleClick={this.handleClick}/>
         {this.props.children}
