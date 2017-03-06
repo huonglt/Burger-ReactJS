@@ -3,8 +3,8 @@ import { Meat } from '../hoc/hocFactory.jsx';
 import { MEATS } from '../redux/dataList.js';
 import SelectTitle from './SelectTitle.jsx';
 import NextBack from './NextBack.jsx';
-import { nextFnFactory, backFnFactory, STEPS } from '../hoc/fnFactory.js';
-
+import { nextFnFactory, backFnFactory } from '../hoc/fnFactory.js';
+import { STEPS, getTitle } from '../utils/common.js';
 export default class SelectMeat extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ export default class SelectMeat extends React.Component {
   render() {
     return (
       <div className="stepHeader">
-        <SelectTitle title="Select Meat"/>
+        <SelectTitle title={getTitle(this.stepName)}/>
         <div className="row">
         {
           MEATS.map((meat, index) => <Meat key={index} isSelected={this.props.order.meat === meat.name} clickHandler={this.selectMeat} {...meat}/>)

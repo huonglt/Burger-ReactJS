@@ -3,7 +3,9 @@ import Bun from './Bun.jsx';
 import { BUNS } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
 import SelectTitle from './SelectTitle.jsx';
-import { nextFnFactory, STEPS } from '../hoc/fnFactory.js';
+import { nextFnFactory } from '../hoc/fnFactory.js';
+import { STEPS, getTitle } from '../utils/common.js';
+
 export default class SelectBun extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ export default class SelectBun extends React.Component {
   render() {
     return (
       <div className="stepHeader">
-        <SelectTitle title="Select bun"/>
+        <SelectTitle title={getTitle(this.stepName)}/>
         <div className="row">
         {
           BUNS.map((bun, index) => <Bun isSelected={bun.name === this.props.order.bun} key={index} {...bun} clickHandler={this.selectBun}/>)

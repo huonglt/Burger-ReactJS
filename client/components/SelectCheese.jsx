@@ -3,7 +3,8 @@ import SelectTitle from './SelectTitle.jsx';
 import { Cheese } from '../hoc/hocFactory.jsx';
 import { CHEESES } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
-import { nextFnFactory, backFnFactory, STEPS } from '../hoc/fnFactory.js';
+import { nextFnFactory, backFnFactory } from '../hoc/fnFactory.js';
+import { STEPS, getTitle } from '../utils/common.js';
 export default class SelectCheese extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ export default class SelectCheese extends React.Component {
   render() {
     return (
       <div className="stepHeader">
-        <SelectTitle title="Select Cheese"/>
+        <SelectTitle title={getTitle(this.stepName)}/>
           <div className="row">
           {
             CHEESES.map((cheese, index) => <Cheese isSelected={this.props.order.cheese === cheese.name} clickHandler={this.selectCheese} key={index} {...cheese}/>)
