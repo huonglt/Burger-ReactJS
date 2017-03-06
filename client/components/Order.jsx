@@ -4,10 +4,6 @@ import OrderButtonBar from './OrderButtonBar.jsx';
 export default class Order extends React.Component {
   constructor(props) {
     super(props);
-    this.completeOrder = this.completeOrder.bind(this);
-  }
-  completeOrder() {
-    this.props.completeOrder();
   }
   render() {
     let {bun, meat, cheese, salads, extras} = this.props;
