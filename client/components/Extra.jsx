@@ -1,5 +1,6 @@
 import React from 'react';
 import { resolveImgSrc } from '../utils/common.js';
+import { toggleCheckbox } from '../utils/common.js';
 export default class Extra extends React.Component {
   constructor(props) {
     super(props);
@@ -8,13 +9,8 @@ export default class Extra extends React.Component {
   clickHandler(event) {
     event.stopPropagation();
     let extraName = this.props.name;
-
-    this.chkExtra.checked = !this.chkExtra.checked;
-    if(this.chkExtra.checked) {
-      this.props.selectExtra(extraName);
-    } else {
-      this.props.unselectExtra(extraName);
-    }
+    let isChecked = toggleCheckbox(this.chkExtra);
+    (isChecked) ? this.props.selectExtra(extraName) : this.props.unselectExtra(extraName);
   }
   render() {
     let { name, img, isChecked } = this.props;

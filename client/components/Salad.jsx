@@ -1,5 +1,5 @@
 import React from 'react';
-import { resolveImgSrc } from '../utils/common.js';
+import { resolveImgSrc, toggleCheckbox } from '../utils/common.js';
 export default class Salad extends React.Component {
   constructor(props) {
     super(props);
@@ -8,13 +8,8 @@ export default class Salad extends React.Component {
   clickHandler(event) {
     event.stopPropagation();
     let saladName = this.props.name;
-
-    this.chkSalad.checked = !this.chkSalad.checked;
-    if(this.chkSalad.checked) {
-      this.props.selectSalad(saladName);
-    } else {
-      this.props.unselectSalad(saladName);
-    }
+    let isChecked = toggleCheckbox(this.chkSalad);
+    (isChecked) ? this.props.selectSalad(saladName) : this.props.unselectSalad(saladName);
   }
   render() {
     let { name, img, isChecked } = this.props;
