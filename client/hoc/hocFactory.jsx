@@ -1,5 +1,5 @@
 import React from 'react';
-import { resolveImgSrc } from '../utils/common.js';
+import { resolveImgSrc, getCSSClass } from '../utils/common.js';
 /*
  * Cheese & Meat are similar classes in terms of behavior and properties.
  * Use this hocFactory here to produce the Cheese class & Meat class
@@ -17,7 +17,7 @@ const hocFactory = () => {
       }
       render() {
         let { name, img } = this.props;
-        let isSelected = this.props.isSelected ? 'selectedItem' : '';
+        let isSelected = getCSSClass(this.props.isSelected);
         return (
           <div className={isSelected + " col-xs-3 col-sm-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
             <div className="centerAlign">{name}</div>
