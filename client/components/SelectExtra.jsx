@@ -3,18 +3,20 @@ import SelectTitle from './SelectTitle.jsx';
 import { EXTRAS } from '../redux/dataList.js';
 import Extra from './Extra.jsx';
 import NextBack from './NextBack.jsx';
-import { backFnFactory, STEPS} from '../hoc/fnFactory.js';
+import { backFnFactory, isCheckedFnFactory } from '../hoc/fnFactory.js';
+import { STEPS, getTitle } from '../utils/common.js';
 export default class SelectExtra extends React.Component {
   constructor(props) {
     super(props);
     this.stepName = STEPS[4]; //Extra
     this.selectExtra = this.selectExtra.bind(this);
     this.unselectExtra = this.unselectExtra.bind(this);
-    this.isChecked = this.isChecked.bind(this);
+    this.isChecked = isCheckedFnFactory(this.props.order.extras).bind(this);
     this.back = backFnFactory(this.stepName).bind(this);
   }
   componentDidMount() {
     this.props.selectStep(this.stepName);
+
   }
   selectExtra(extraName) {
     this.props.selectExtra(extraName);
@@ -22,14 +24,11 @@ export default class SelectExtra extends React.Component {
   unselectExtra(extraName) {
     this.props.unselectExtra(extraName);
   }
-  isChecked(extraName) {
-    let extras = this.props.order.extras;
-    return (extras && extras.find(extra => extra == extraName));
-  }
   render() {
+
     return (
       <div className="stepHeader">
-        <SelectTitle title="Select Extra"/>
+        <SelectTitle title={getTitle(this.stepName)}/>
         <div className="row">
         {
           EXTRAS.map((extra, index) => <Extra isChecked={this.isChecked(extra.name)} selectExtra={this.selectExtra} unselectExtra={this.unselectExtra}  key={index}  {...extra}/>)
