@@ -1,5 +1,5 @@
 import React from 'react';
-import { resolveImgSrc } from '../utils/common.js';
+import { resolveImgSrc, getCSSClass } from '../utils/common.js';
 
 export default class Meat extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class Meat extends React.Component {
   }
   render() {
     let {name, img} = this.props;
-    let isSelected = this.props.isSelected ? 'selectedItem' : '';
+    let isSelected = getCSSClass(this.props.isSelected);
     return (
         <div className={isSelected + " col-xs-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
           <div className="centerAlign">{name}</div>
