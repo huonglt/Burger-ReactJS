@@ -15,3 +15,10 @@ export const toggleCheckbox = (chk) => {
 export const toggleFn = (exp, f1, f2, ...args) => {
   return (exp) ? f1(args) : f2(args);
 }
+
+/*
+ * return the CSS class for selected item like Bun, Meat, and Cheese
+ */
+export const getCSSClass = (exp) => {
+  return (exp) ? 'selectedItem' : '';
+}
