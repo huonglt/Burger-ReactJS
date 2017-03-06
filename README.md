@@ -13,7 +13,8 @@ Things I learn from making this app:
 - Redux: store, state, binding React components to the redux store
 - Actions / reducers
 - React-Bootraps
-- Using factory function to make Component classes of the same behavior and properties
+- Using factory function to make Component classes of the same behavior and properties like Cheese class and Meat class
+- Using factory function to generate common method for components like next() and back()
 
 ## Prerequisite
 node & yarn preinstalled
