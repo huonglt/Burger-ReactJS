@@ -3,22 +3,20 @@ import Bun from './Bun.jsx';
 import { BUNS } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
 import SelectTitle from './SelectTitle.jsx';
-import { browserHistory } from 'react-router';
+import { nextFnFactory, STEPS } from '../hoc/fnFactory.js';
 export default class SelectBun extends React.Component {
   constructor(props) {
     super(props);
+    this.stepName = STEPS[0]; // Bun
     this.selectBun = this.selectBun.bind(this);
-    this.next = this.next.bind(this);
+    this.next = nextFnFactory(this.stepName).bind(this);
   }
   componentDidMount() {
-    this.props.selectStep('Bun');
+    this.props.selectStep(this.stepName);
   }
   selectBun(name) {
     this.props.selectBun(name);
     this.next();
-  }
-  next(event) {
-    browserHistory.push('/Burger/Meat');
   }
   render() {
     return (

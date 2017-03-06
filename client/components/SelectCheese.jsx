@@ -3,26 +3,21 @@ import SelectTitle from './SelectTitle.jsx';
 import { Cheese } from '../hoc/hocFactory.jsx';
 import { CHEESES } from '../redux/dataList.js';
 import NextBack from './NextBack.jsx';
-import { browserHistory } from 'react-router';
+import { nextFnFactory, backFnFactory, STEPS } from '../hoc/fnFactory.js';
 export default class SelectCheese extends React.Component {
   constructor(props) {
     super(props);
+    this.stepName = STEPS[2]; //Cheese
     this.selectCheese = this.selectCheese.bind(this);
-    this.next = this.next.bind(this);
-    this.back = this.back.bind(this);
+    this.next = nextFnFactory(this.stepName).bind(this);
+    this.back = backFnFactory(this.stepName).bind(this);
   }
   componentDidMount() {
-    this.props.selectStep('Cheese');
+    this.props.selectStep(this.stepName);
   }
   selectCheese(cheeseName) {
     this.props.selectCheese(cheeseName);
     this.next();
-  }
-  next() {
-    browserHistory.push('/Burger/Salad');
-  }
-  back() {
-    browserHistory.push('/Burger/Meat');
   }
   render() {
     return (

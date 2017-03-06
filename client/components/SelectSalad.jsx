@@ -3,31 +3,26 @@ import SelectTitle from './SelectTitle.jsx';
 import { SALADS } from '../redux/dataList.js';
 import Salad from './Salad.jsx';
 import NextBack from './NextBack.jsx';
-import { browserHistory } from 'react-router';
+import { nextFnFactory, backFnFactory, STEPS } from '../hoc/fnFactory.js';
 
 export default class SelectSalad extends React.Component {
   constructor(props) {
     super(props);
+    this.stepName = STEPS[3]; // Salad
     this.selectSalad = this.selectSalad.bind(this);
     this.unselectSalad = this.unselectSalad.bind(this);
-    this.next = this.next.bind(this);
-    this.back = this.back.bind(this);
+    this.next = nextFnFactory(this.stepName).bind(this);
+    this.back = backFnFactory(this.stepName).bind(this);
     this.isChecked = this.isChecked.bind(this);
   }
   componentDidMount() {
-    this.props.selectStep('Salad');
+    this.props.selectStep(this.stepName);
   }
   selectSalad(saladName) {
     this.props.selectSalad(saladName);
   }
   unselectSalad(saladName) {
     this.props.unselectSalad(saladName);
-  }
-  next() {
-    browserHistory.push('/Burger/Extra');
-  }
-  back() {
-    browserHistory.push('/Burger/Cheese');
   }
 
   isChecked(saladName) {
