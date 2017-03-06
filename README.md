@@ -14,7 +14,7 @@ Things I learnt from making this app:
 - Actions / reducers
 - React-Bootraps
 - Using factory function to create Component classes of the same behavior and properties like Cheese class and Meat class. Checkout /client/hoc/hocFactory.js
-- Using factory functions to generate common methods for components like next() and back(). Checkout /client/hoc/fnFactory.js
+- Using factory functions to generate common methods for components like next(), back(), and isChecked. Checkout /client/hoc/fnFactory.js
 
 ## Prerequisite
 node & yarn preinstalled
