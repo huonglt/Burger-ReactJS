@@ -1,11 +1,5 @@
 import { browserHistory } from 'react-router';
-export const STEPS = ['Bun', 'Meat', 'Cheese', 'Salad', 'Extra'];
-const ROOT = '/Burger/';
-
-/*
- * Find the index of the currentStep in the STEPS
- */
-const findStepIndex = (stepName) => STEPS.findIndex(step => step == stepName);
+import { STEPS, ROOT, findStepIndex, hasItem } from '../utils/common.js';
 /*
  * A factory for the next function using in the OrderButtonBar
  */
@@ -33,3 +27,13 @@ export const backFnFactory = (stepName) => {
     browserHistory.push(ROOT + STEPS[routeIndex]);
   }
 }
+
+/*
+ * A factory to generate isChecked function to decide the checked value of a checkbox
+ * Use to check / uncheck the Salad and Extra in SelectSalad and SelectExtra components
+ */
+ export const isCheckedFnFactory = (items) => {
+   return (itemName) => {
+     return hasItem(items, itemName);
+   }
+ }
