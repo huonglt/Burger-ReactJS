@@ -9,7 +9,7 @@ Things I learnt from making this app:
 - Type checking for React Components
 - Routing with browser history
 - JSX syntax
-- ES6: modules, classes, export, const / let, new Array methods, arrow functions
+- ES6: modules, classes, export / import, spread operator, new Array methods, arrow functions
 - Redux: store, state, binding React components to the redux store
 - Actions / reducers
 - React-Bootraps
