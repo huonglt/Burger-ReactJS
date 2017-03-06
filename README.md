@@ -1,10 +1,10 @@
-This little app is a rewrite of the same Burger Builder app which I wrote a while ago using AngularJS, HTML5, and Bootstrap. Build tools were grunt and bower.
+This little app is a rewrite of the same Burger Builder app which I wrote a while ago using AngularJS, HTML5, and Bootstrap. Build tools were grunt and bower. Responsive and mobile-friendly
 
 I replace it here with ReactJS, Redux, React-Boostrap, Babel for ES6. Build tools are web-pack, and yarn. Yarn is a tool to manage npm packages. I found it easier to use than npm
 
 The test module for this app will be added later.
 
-Things I learn from making this app:
+Things I learnt from making this app:
 - ReactJS components: Functional components & class components
 - Type checking for React Components
 - Routing with browser history
