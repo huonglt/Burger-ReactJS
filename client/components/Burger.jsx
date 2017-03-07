@@ -10,9 +10,7 @@ export default class Burger extends React.Component {
     this.completeOrder = this.completeOrder.bind(this);
     this.startOver = this.startOver.bind(this);
   }
-
-  handleClick(event) {
-    let stepName = event.target.name;
+  handleClick(stepName) {
     this.props.selectStep(stepName);
     changeToRoute(stepName);
   }
@@ -25,9 +23,7 @@ export default class Burger extends React.Component {
     changeToRoute(STEP_START_OVER);
   }
   render() {
-    let order = this.props.order;
-    let currentStep = this.props.currentStep;
-
+    let {order, currentStep} = this.props;
     return (
       <div >
         <div className="row stepHeader spacingBottom">
