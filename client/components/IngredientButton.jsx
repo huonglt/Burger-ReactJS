@@ -12,7 +12,7 @@ export default class IngredientButton extends React.Component {
     let {name, currentStep} = this.props;
     let isActive = (currentStep === name) ? 'active' : '';
     return (
-      <button type="button" className={isActive + " btn btn-default btn-sm burgerText burgerButton"} name={name} onClick={this.handleClick}>{name}</button>
+      <button type="button" className={isActive + " btn btn-default btn-sm burgerText burgerButton"} onClick={this.handleClick}>{name}</button>
     );
   }
 }
