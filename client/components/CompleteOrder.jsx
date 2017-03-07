@@ -1,9 +1,12 @@
 import React from 'react';
 import Order from './Order.jsx';
+import { STEP_COMPLETE } from '../utils/common.js';
 export default class CompleteOrder extends React.Component {
   constructor(props) {
     super(props);
-    this.props.selectStep('Complete');
+  }
+  componentDidMount() {
+    this.props.selectStep(STEP_COMPLETE);
   }
   render() {
     let order = this.props.order;
