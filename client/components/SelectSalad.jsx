@@ -1,10 +1,11 @@
 import React from 'react';
 import SelectTitle from './SelectTitle.jsx';
-import { SALADS } from '../redux/dataList.js';
+import { SALADS } from '../data/listData.js';
+import { STEPS } from '../data/stepData.js';
 import Salad from './Salad.jsx';
 import NextBack from './NextBack.jsx';
 import { nextFnFactory, backFnFactory, isCheckedFnFactory } from '../hoc/fnFactory.js';
-import { STEPS, getTitle } from '../utils/common.js';
+import { getTitle } from '../utils/common.js';
 
 export default class SelectSalad extends React.Component {
   constructor(props) {

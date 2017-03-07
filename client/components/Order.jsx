@@ -2,9 +2,6 @@ import React from 'react';
 import OrderButtonBar from './OrderButtonBar.jsx';
 
 export default class Order extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     let {bun, meat, cheese, salads, extras} = this.props;
 

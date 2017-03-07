@@ -1,10 +1,11 @@
 import React from 'react';
 import Bun from './Bun.jsx';
-import { BUNS } from '../redux/dataList.js';
+import { BUNS } from '../data/listData.js';
+import { STEPS } from '../data/stepData.js';
 import NextBack from './NextBack.jsx';
 import SelectTitle from './SelectTitle.jsx';
 import { nextFnFactory, isSelectedFnFactory } from '../hoc/fnFactory.js';
-import { STEPS, getTitle } from '../utils/common.js';
+import { getTitle } from '../utils/common.js';
 
 export default class SelectBun extends React.Component {
   constructor(props) {

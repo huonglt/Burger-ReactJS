@@ -1,6 +1,6 @@
 import React from 'react';
 import IngredientButton from './IngredientButton.jsx';
-import { INGREDIENTS } from '../redux/dataList.js';
+import { INGREDIENTS } from '../data/listData.js';
 
 export default (props) => {
   let { currentStep, handleClick } = props;

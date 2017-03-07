@@ -1,5 +1,6 @@
 import { handleActions } from 'redux-actions';
 import { SELECT_BUN, SELECT_STEP, SELECT_MEAT, SELECT_CHEESE, SELECT_SALAD, UNSELECT_SALAD, SELECT_EXTRA, UNSELECT_EXTRA, START_OVER, COMPLETE_ORDER } from './actions.js';
+import { STEP_COMPLETE } from '../data/stepData.js';
 
 const initialState = { order: {}, currentStep: ''};
 
@@ -72,7 +73,7 @@ export const reducers = (state = initialState, action) => {
       return state;
     }
     case COMPLETE_ORDER: {
-      return {...state, currentStep: 'Complete'};
+      return {...state, currentStep: STEP_COMPLETE};
     }
     case START_OVER: {
       return initialState;

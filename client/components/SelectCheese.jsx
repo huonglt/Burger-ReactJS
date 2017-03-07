@@ -1,10 +1,11 @@
 import React from 'react';
 import SelectTitle from './SelectTitle.jsx';
 import { Cheese } from '../hoc/hocFactory.jsx';
-import { CHEESES } from '../redux/dataList.js';
+import { CHEESES } from '../data/listData.js';
+import { STEPS } from '../data/stepData.js';
 import NextBack from './NextBack.jsx';
 import { nextFnFactory, backFnFactory, isSelectedFnFactory } from '../hoc/fnFactory.js';
-import { STEPS, getTitle } from '../utils/common.js';
+import { getTitle } from '../utils/common.js';
 export default class SelectCheese extends React.Component {
   constructor(props) {
     super(props);

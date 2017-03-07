@@ -1,5 +1,6 @@
 import { browserHistory } from 'react-router';
-import { STEPS, ROOT, findStepIndex, hasItem } from '../utils/common.js';
+import { findStepIndex, hasItem } from '../utils/common.js';
+import { STEPS, ROOT } from '../data/stepData.js';
 /*
  * A factory for the next function using in the OrderButtonBar
  */

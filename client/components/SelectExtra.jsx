@@ -1,10 +1,11 @@
 import React from 'react';
 import SelectTitle from './SelectTitle.jsx';
-import { EXTRAS } from '../redux/dataList.js';
+import { EXTRAS } from '../data/listData.js';
+import { STEPS } from '../data/stepData.js';
 import Extra from './Extra.jsx';
 import NextBack from './NextBack.jsx';
 import { backFnFactory, isCheckedFnFactory } from '../hoc/fnFactory.js';
-import { STEPS, getTitle } from '../utils/common.js';
+import { getTitle } from '../utils/common.js';
 export default class SelectExtra extends React.Component {
   constructor(props) {
     super(props);

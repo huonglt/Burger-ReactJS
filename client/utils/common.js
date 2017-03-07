@@ -1,11 +1,5 @@
 import { browserHistory } from 'react-router';
-
-export const STEPS = ['Bun', 'Meat', 'Cheese', 'Salad', 'Extra'];
-
-export const STEP_COMPLETE = 'Complete';
-export const STEP_START_OVER = '';
-
-export const ROOT = '/Burger/';
+import { STEPS, ROOT, STEP_COMPLETE, STEP_START_OVER } from '../data/stepData.js';
 
 export const resolveImgSrc = (imgName) => require('../images/' + imgName);
 
