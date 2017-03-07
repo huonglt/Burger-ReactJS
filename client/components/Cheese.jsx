@@ -1,14 +1,8 @@
 import React from 'react';
 import { resolveImgSrc, getCSSClass } from '../utils/common.js';
 import Image from './Image.jsx';
-export default class Cheese extends React.Component {
-  constructor(props) {
-    super(props);
-    this.clickHandler = this.clickHandler.bind(this);
-  }
-  clickHandler() {
-    this.props.selectCheese(this.props.name);
-  }
+import BaseComponent from './BaseComponent.jsx';
+export default class Cheese extends BaseComponent {
   render() {
     let { name, img } = this.props;
     let isSelected = getCSSClass(this.props.isSelected);
