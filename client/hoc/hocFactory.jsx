@@ -1,5 +1,6 @@
 import React from 'react';
 import { resolveImgSrc, getCSSClass } from '../utils/common.js';
+import Image from '../components/Image.jsx';
 /*
  * Cheese & Meat are similar classes in terms of behavior and properties.
  * Use this hocFactory here to produce the Cheese class & Meat class
@@ -21,7 +22,7 @@ const hocFactory = () => {
         return (
           <div className={isSelected + " col-xs-3 col-sm-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
             <div className="centerAlign">{name}</div>
-            <div><img src={resolveImgSrc(img)} className="img-responsive"/></div>
+            <div><Image src={resolveImgSrc(img)}/></div>
           </div>
         );
       }
