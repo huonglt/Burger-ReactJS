@@ -2,9 +2,7 @@ import { connect } from 'react-redux';
 import SelectBun from '../components/SelectBun.jsx';
 import { selectBunAction, selectStepAction } from '../redux/actions.js';
 
-const mapStateToProps = (state, props) => {
-  return state;
-}
+const mapStateToProps = (state, props) => state
 
 const mapDispatchToProps = (dispatch) => {
   return {

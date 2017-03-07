@@ -2,9 +2,7 @@ import { connect } from 'react-redux';
 import Burger from '../components/Burger.jsx';
 import { selectStepAction, startOverAction, completeOrderAction } from '../redux/actions.js';
 
-const mapStateToProps = (state, props) => {
-  return state;
-}
+const mapStateToProps = (state, props) => state
 
 const mapDispatchToProps = (dispatch) => {
   return {
