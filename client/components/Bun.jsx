@@ -1,5 +1,6 @@
 import React from 'react';
 import { resolveImgSrc, getCSSClass } from '../utils/common.js';
+import Image from './Image.jsx';
 export default class Bun extends React.Component {
   constructor(props) {
     super(props);
@@ -15,8 +16,8 @@ export default class Bun extends React.Component {
         <div className={isSelected + " col-xs-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
           <div className="centerAlign">{name}</div>
           <div>
-            <img src={resolveImgSrc(topImg)} className="img-responsive"/>
-            <img src={resolveImgSrc(bottomImg)} className="img-responsive"/>
+            <Image src={resolveImgSrc(topImg)}/>
+            <Image src={resolveImgSrc(bottomImg)}/>
           </div>
         </div>
     );

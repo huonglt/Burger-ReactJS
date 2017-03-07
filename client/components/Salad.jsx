@@ -1,5 +1,6 @@
 import React from 'react';
 import { resolveImgSrc, toggleCheckbox, toggleFn } from '../utils/common.js';
+import Image from './Image.jsx';
 export default class Salad extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ export default class Salad extends React.Component {
           <input ref={chk => this.chkSalad = chk} defaultChecked={isChecked} type="checkbox" value={name}/>
           <label className="burgerText">&nbsp;&nbsp;{name}</label>
         </div>
-        <img src={resolveImgSrc(img)} className="img-responsive"/>
+        <Image src={resolveImgSrc(img)}/>
       </div>
     );
   }

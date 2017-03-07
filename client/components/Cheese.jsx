@@ -1,6 +1,6 @@
 import React from 'react';
 import { resolveImgSrc, getCSSClass } from '../utils/common.js';
-
+import Image from './Image.jsx';
 export default class Cheese extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ export default class Cheese extends React.Component {
     return (
       <div className={isSelected + " col-xs-3 col-sm-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
         <div className="centerAlign">{name}</div>
-        <img src={resolveImgSrc(img)} className="img-responsive"/>
+        <Image src={resolveImgSrc(img)}/>
       </div>
     );
   }
