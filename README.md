@@ -5,7 +5,7 @@ I replace it here with ReactJS, Redux, React-Boostrap, Babel for ES6. Build tool
 The test module for this app will be added later.
 
 Things I learnt from making this app:
-- ReactJS components: Functional components & class components
+- ReactJS components: Functional components & class components, class component inheritance
 - Type checking for React Components
 - Routing with browser history
 - JSX syntax
