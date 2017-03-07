@@ -37,3 +37,12 @@ export const backFnFactory = (stepName) => {
      return hasItem(items, itemName);
    }
  }
+
+ /*
+  *  A factory to produce isSelected function to decide if a bun, meat, or cheese is selected aItem
+  * value1 is the value from the prop of the component
+  * value2 is the name of the item you want to check against
+  */
+ export const isSelectedFnFactory = (value1) => {
+   return (value2) => (value1 == value2);
+ }
