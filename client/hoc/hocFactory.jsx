@@ -1,6 +1,7 @@
 import React from 'react';
 import { resolveImgSrc, getCSSClass } from '../utils/common.js';
 import Image from '../components/Image.jsx';
+import BaseComponent from '../components/BaseComponent.jsx';
 /*
  * Cheese & Meat are similar classes in terms of behavior and properties.
  * Use this hocFactory here to produce the Cheese class & Meat class
@@ -8,14 +9,7 @@ import Image from '../components/Image.jsx';
  */
 const hocFactory = () => {
   return (
-    class extends React.Component {
-      constructor(props) {
-        super(props);
-        this.clickHandler = this.clickHandler.bind(this);
-      }
-      clickHandler() {
-        this.props.clickHandler(this.props.name);
-      }
+    class extends BaseComponent {
       render() {
         let { name, img } = this.props;
         let isSelected = getCSSClass(this.props.isSelected);
