@@ -11,19 +11,20 @@ import { SelectSaladContainer } from '../containers/SelectSaladContainer.jsx';
 import { SelectExtraContainer } from '../containers/SelectExtraContainer.jsx';
 import { CompleteOrderContainer } from '../containers/CompleteOrderContainer.jsx';
 export default (
-    <Router history={browserHistory}>
-      <Route path="/" component={App}>
-        <Route path="/About" component={About}></Route>
-        <Route path="/Burger" component={BurgerContainer}>
-          <Route path="Bun" component={SelectBunContainer}/>
-          <Route path="Meat" component={SelectMeatContainer}/>
-          <Route path="Cheese" component={SelectCheeseContainer}/>
-          <Route path="Salad" component={SelectSaladContainer}/>
-          <Route path="Extra" component={SelectExtraContainer}/>
-          <Route path="Complete" component={CompleteOrderContainer}/>
-          <IndexRedirect to="/Burger/Bun" />
-        </Route>
-        <IndexRedirect to="/About" />
-        <Route path="*" component={NotFound}></Route>
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <Route path="/About" component={About}></Route>
+      <Route path="/Burger" component={BurgerContainer}>
+        <Route path="Bun" component={SelectBunContainer}/>
+        <Route path="Meat" component={SelectMeatContainer}/>
+        <Route path="Cheese" component={SelectCheeseContainer}/>
+        <Route path="Salad" component={SelectSaladContainer}/>
+        <Route path="Extra" component={SelectExtraContainer}/>
+        <Route path="Complete" component={CompleteOrderContainer}/>
+        <IndexRedirect to="/Burger/Bun" />
       </Route>
-    </Router>);
+      <IndexRedirect to="/About" />
+      <Route path="*" component={NotFound}></Route>
+    </Route>
+  </Router>
+);
