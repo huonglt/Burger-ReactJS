@@ -1,5 +1,5 @@
 import React from 'react';
-import { resolveImgSrc, getCSSClass } from '../utils/common.js';
+import { getCSSClass } from '../utils/common.js';
 import Image from './Image.jsx';
 import BaseComponent from './BaseComponent.jsx';
 export default class Bun extends BaseComponent {
@@ -10,8 +10,8 @@ export default class Bun extends BaseComponent {
         <div className={isSelected + " col-xs-3 col-md-3 burgerItem burgerColSpace"} onClick={this.clickHandler}>
           <div className="centerAlign">{name}</div>
           <div>
-            <Image src={resolveImgSrc(topImg)}/>
-            <Image src={resolveImgSrc(bottomImg)}/>
+            <Image src={topImg}/>
+            <Image src={bottomImg}/>
           </div>
         </div>
     );

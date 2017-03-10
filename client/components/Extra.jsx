@@ -1,5 +1,5 @@
 import React from 'react';
-import { resolveImgSrc, toggleCheckbox, toggleFn } from '../utils/common.js';
+import { toggleCheckbox, toggleFn } from '../utils/common.js';
 import Image from './Image.jsx';
 export default class Extra extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class Extra extends React.Component {
           <input type="checkbox" value={name} ref={chk => this.chkExtra = chk} defaultChecked={isChecked}/>
           <label className="burgerText">&nbsp;&nbsp;{name}</label>
         </div>
-        <Image src={resolveImgSrc(img)}/>
+        <Image src={img}/>
       </div>
     );
   }
