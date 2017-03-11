@@ -2,7 +2,8 @@ import React from 'react';
 import ButtonBar from './ButtonBar.jsx';
 import Order from './Order.jsx';
 import _isEmpty from 'lodash.isempty';
-import { findRoutePath, changeToRoute, STEP_COMPLETE, STEP_START_OVER } from '../utils/common.js';
+import { findRoutePath, changeToRoute } from '../utils/common.js';
+import  { STEP_COMPLETE, STEP_START_OVER } from '../data/stepData.js';
 export default class Burger extends React.Component {
   constructor(props) {
     super(props);

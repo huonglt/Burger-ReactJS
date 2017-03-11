@@ -1,6 +1,6 @@
 import React from 'react';
 import Order from './Order.jsx';
-import { STEP_COMPLETE } from '../utils/common.js';
+import { STEP_COMPLETE } from '../data/stepData.js';
 export default class CompleteOrder extends React.Component {
   constructor(props) {
     super(props);
