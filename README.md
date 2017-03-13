@@ -2,7 +2,7 @@ This little app is a rewrite of the same Burger Builder app which I wrote a whil
 
 I replace it here with ReactJS, Redux, React-Boostrap, Babel for ES6. Build tools are web-pack, and yarn. Yarn is a tool to manage npm packages. I found it easier to use than npm
 
-The test module for this app will be added later.
+I'm using jest as the test runner to test redux layer. Very quick, and simple to use. jest is being used by Facebook.
 
 Things I learnt from making this app:
 - ReactJS components: Functional components & class components, class component inheritance
@@ -32,3 +32,9 @@ yarn install
 
 ## To start
 yarn start
+
+## To test
+yarn tests
+
+## To test reducers only
+yarn test:reducers
