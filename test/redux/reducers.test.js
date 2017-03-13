@@ -1,7 +1,12 @@
-import { selectBunAction, selectMeatAction, selectCheeseAction, selectSaladAction } from '../../client/redux/actions.js';
+import { selectBunAction, selectMeatAction, selectCheeseAction, selectSaladAction, unselectSaladAction } from '../../client/redux/actions.js';
 import { reducers } from '../../client/redux/reducers.js';
 
+// describe is to group number of tests to make a test suite
 describe('app reducers', () => {
+  /*
+   * it(name, fn) is alias for test(name, fn)
+   * I use it here just because it's shorter to type and it's familiar with mocha
+   */
   it('should return the default initial state', () => {
     let action = {};
     // when arguments are passed in with undefined, default value will be used.
@@ -60,6 +65,24 @@ describe('app reducers', () => {
     let saladName = 'Cucumber';
     let newState = reducers(state, selectSaladAction(saladName));
     let expectedState = {order: {salads: ['Onion', 'Tomato', saladName]}};
+    expect(newState).toEqual(expectedState);
+    expect(state).toEqual(state);
+  })
+
+  it('Unselect an already selected salad, the new state would have that selad removed. the old existing state unchanged', () => {
+    let state = {order: {salads: ['Onion', 'Tomato']}};
+    let saladName = 'Tomato';
+    let newState = reducers(state, unselectSaladAction(saladName));
+    let expectedState = {order: {salads: ['Onion']}};
+    expect(newState).toEqual(expectedState);
+    expect(state).toEqual(state);
+  })
+
+  it('Unselect a salad that has not been selected yet, the new state would be the same as the existing state. the old existing state unchanged', () => {
+    let state = {order: {salads: ['Onion', 'Tomato']}};
+    let saladName = 'Cucumber';
+    let newState = reducers(state, unselectSaladAction(saladName));
+    let expectedState = {order: {salads: ['Onion', 'Tomato']}};
     expect(newState).toEqual(expectedState);
     expect(state).toEqual(state);
   })
