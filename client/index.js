@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import routes from './components/routes.js';
 import { Router, browserHistory } from 'react-router';
 import { reducers } from './redux/reducers.js';
