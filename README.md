@@ -32,24 +32,31 @@ I'm using node v7.5.0, yarn v0.20.3
 yarn install
 
 ## Scripts to run
+```
 yarn start:dev:
+```
   - running the app on "dev" enviroment. No hash in filename. No uglify / minification. No code splitting
   - process.env.NODE_ENV = dev
   - using webpack-dev-server
   - running on port 8080
   - serving files from build folder
-
+```
 yarn start:prod:
+```
   - running the app on "production" environment. Hashing in file name. Uglify. Code spliting on node_modules.
   - process.env.NODE_ENV = production
   - using webpack-dev-server
   - running on port 9090
   - serving files from dist folder
 
+```
 yarn build:dev:
+```
   - to see webpack generated bundle files in "dev" environment
 
+```
 yarn build:prod:
+```
   - to see webpack generated bundle files in "production" environment
 
 ## To test
