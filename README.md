@@ -16,7 +16,7 @@ Things I learnt from making this app:
 - Using factory function to create Component classes of the same behavior and properties like Cheese class and Meat class. Checkout /client/hoc/hocFactory.js
 - Using factory functions to generate common methods for components like next(), back(), and isChecked(). Checkout /client/hoc/fnFactory.js
 - Proxying method called from child component to parent component. I found it is very helpful to pass in all arguments required to execute the parent component method instead of getting the arguments from other object like event
-- Using jest for unit tests
+- Using jest for unit tests. jest has disable auto mocking now
 
 I enjoy using factory functions to generate React component classes or methods. It helps a lot in reducing duplicated code, and boost code reusability.
 
@@ -32,7 +32,7 @@ I'm using node v7.5.0, yarn v0.20.3
 yarn install
 
 ## To start
-yarn start
+yarn start:dev
 
 ## To test
 yarn tests
