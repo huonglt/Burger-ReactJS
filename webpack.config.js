@@ -1,4 +1,4 @@
 
-const buildConfig = (env) => require('./config/' + env + '.js');
+const buildConfig = (env) => require('./webpack/' + env + '.js');
 
 module.exports = buildConfig;
