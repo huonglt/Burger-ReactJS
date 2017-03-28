@@ -38,15 +38,17 @@ yarn start:dev:
   - using webpack-dev-server
   - running on port 8080
   - serving files from build folder
-  
+
 yarn start:prod:
   - running the app on "production" environment. Hashing in file name. Uglify. Code spliting on node_modules.
   - process.env.NODE_ENV = production
   - using webpack-dev-server
   - running on port 9090
   - serving files from dist folder
+
 yarn build:dev:
   - to see webpack generated bundle files in "dev" environment
+
 yarn build:prod:
   - to see webpack generated bundle files in "production" environment
 
