@@ -43,7 +43,7 @@ yarn start:dev
 ```
 yarn start:prod
 ```
-  - running the app on "production" environment. Hashing in file name. Uglify. Code spliting on node_modules.
+  - running the app on "production" environment. Hashing in file name. Uglify. Code spliting on external libraries (node_modules)
   - process.env.NODE_ENV = production
   - using webpack-dev-server
   - running on port 9090
