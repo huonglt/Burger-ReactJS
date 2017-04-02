@@ -19,6 +19,7 @@ Things I learnt from making this app:
 - Using jest for unit tests. jest has disable auto mocking now
 - Using eslint for react / es6 modules
 - Webpack build for different environments
+- Code splitting on each route and on external dependencies. Application code is split into several bundles to speed up loading time. Loading component by demand at runtime, rather than loading everything at once
 
 I enjoy using factory functions to generate React component classes or methods. It helps a lot in reducing duplicated code, and boost code reusability.
 
