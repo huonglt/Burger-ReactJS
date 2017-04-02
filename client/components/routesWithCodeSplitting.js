@@ -2,36 +2,36 @@ import React from 'react';
 import { Router, Route, Link, browserHistory, IndexRoute, IndexRedirect, Redirect } from 'react-router';
 import App from './App.jsx';
 
-const errorLoading = (error) => console.log('error while loading module: ', error)
-
-const loadRoute = (cb) => (module) => cb(null, module.default)
-
+const errorHandler = (err) => console.log('error while loading module: ', err);
+const asyncLoad = (moduleLoader, cb) => {
+  moduleLoader.then(module => cb(null, module.default)).catch(errorHandler);
+}
 const about = (nextState, cb) => {
-  System.import('./About.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('./About.jsx'), cb);
 }
 const burgerContainer = (nextState, cb) => {
-  System.import('../containers/BurgerContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/BurgerContainer.jsx'), cb);
 }
 const bunContainer = (nextState, cb) => {
-  System.import('../containers/SelectBunContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/SelectBunContainer.jsx'), cb);
 }
 const meatContainer = (nextState, cb) => {
-  System.import('../containers/SelectMeatContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/SelectMeatContainer.jsx'), cb);
 }
 const cheeseContainer = (nextState, cb) => {
-  System.import('../containers/SelectCheeseContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/SelectCheeseContainer.jsx'),cb);
 }
 const saladContainer = (nextState, cb) => {
-  System.import('../containers/SelectSaladContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/SelectSaladContainer.jsx'), cb);
 }
 const extraContainer = (nextState, cb) => {
-  System.import('../containers/SelectExtraContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/SelectExtraContainer.jsx'), cb);
 }
 const completeOrderContainer = (nextState, cb) => {
-  System.import('../containers/CompleteOrderContainer.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('../containers/CompleteOrderContainer.jsx'), cb);
 }
 const notFound = (nextState, cb) => {
-  System.import('./NotFound.jsx').then(loadRoute(cb)).catch(errorLoading);
+  asyncLoad(System.import('./NotFound.jsx'), cb);
 }
 
 export default (
