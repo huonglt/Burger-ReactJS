@@ -38,7 +38,7 @@ yarn install
 ```
 yarn start:dev
 ```
-  - running the app on "dev" enviroment. No hash in filename. No uglify / minification. Code splitting on each route
+  - running the app on "dev" enviroment. No hash in filename. No uglify / minification. Code splitting on each route. Multiple bundles
   - process.env.NODE_ENV = dev
   - using webpack-dev-server
   - running on port 8080
@@ -46,7 +46,7 @@ yarn start:dev
 ```
 yarn start:prod
 ```
-  - running the app on "production" environment. Hashing in file name. Uglify. Code splitting on each route &  external libraries (node_modules)
+  - running the app on "production" environment. Hashing in file name. Uglify. Code splitting on each route &  external libraries (node_modules). Multiple bundles
   - process.env.NODE_ENV = production
   - using webpack-dev-server
   - running on port 9090
