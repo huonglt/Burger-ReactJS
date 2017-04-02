@@ -1,5 +1,5 @@
 import { browserHistory } from 'react-router';
-import { STEPS, ROOT, STEP_COMPLETE, STEP_START_OVER } from '../data/stepData.js';
+import { STEPS, ROOT, STEP_COMPLETE } from '../data/stepData.js';
 
 export const resolveImgSrc = (imgName) => require('../images/' + imgName);
 
