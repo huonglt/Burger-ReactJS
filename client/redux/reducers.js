@@ -1,4 +1,3 @@
-import { handleActions } from 'redux-actions';
 import { SELECT_BUN, SELECT_STEP, SELECT_MEAT, SELECT_CHEESE, SELECT_SALAD, UNSELECT_SALAD, SELECT_EXTRA, UNSELECT_EXTRA, START_OVER, COMPLETE_ORDER } from './actions.js';
 import { STEP_COMPLETE } from '../data/stepData.js';
 
