@@ -1,10 +1,9 @@
-This little app is a rewrite of the same Burger Builder app which I wrote a while ago using AngularJS, HTML5, and Bootstrap. Build tools were grunt and bower. Responsive and mobile-friendly
+This little app is a rewrite of the same Burger Builder app which I wrote a while ago using AngularJS, HTML5, and Bootstrap.
 
-I replace it here with ReactJS, Redux, React-Boostrap, Babel for ES6. Build tools are web-pack, and yarn. Yarn is a tool to manage npm packages. I found it easier to use than npm
+I replace it here with ReactJS, Redux, React-Boostrap, Babel for ES6. Build tools are web-pack, and yarn.
 
-I'm using jest as the test runner to test redux layer. Very quick, and simple to use. jest is being used by Facebook.
-
-Things I learnt from making this app:
+Things I learnt from making this app: EXTENSIVE
+- Webpack and yarn. Yarn is a tool to manage npm packages. I found it easier to use than npm
 - ReactJS components: Functional components & class components, class component inheritance
 - Type checking for React Components
 - Routing with browser history
@@ -16,9 +15,9 @@ Things I learnt from making this app:
 - Using factory function to create Component classes of the same behavior and properties like Cheese class and Meat class. Checkout /client/hoc/hocFactory.js
 - Using factory functions to generate common methods for components like next(), back(), and isChecked(). Checkout /client/hoc/fnFactory.js
 - Proxying method called from child component to parent component. I found it is very helpful to pass in all arguments required to execute the parent component method instead of getting the arguments from other object like event
-- Using jest for unit tests. jest has disable auto mocking now
+- Using jest for unit tests. Only test redux layer at the moment. jest is being used by Facebook to test their code
 - Using eslint for react / es6 modules
-- Webpack build for different environments
+- Webpack build for different environments: development & "production"
 - Code splitting on each route and on external dependencies. Application code is split into several bundles to speed up loading time. Loading component by demand at runtime, rather than loading everything at once
 
 I enjoy using factory functions to generate React component classes or methods. It helps a lot in reducing duplicated code, and boost code reusability.
