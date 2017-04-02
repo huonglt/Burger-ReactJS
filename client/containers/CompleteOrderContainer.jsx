@@ -9,4 +9,5 @@ const mapDispatchToProps = (dispatch) => {
     selectStep: (stepName) => dispatch(selectStepAction(stepName))
   }
 }
-export const CompleteOrderContainer = connect(mapStateToProps, mapDispatchToProps)(CompleteOrder)
+const CompleteOrderContainer = connect(mapStateToProps, mapDispatchToProps)(CompleteOrder)
+export default CompleteOrderContainer

@@ -11,4 +11,5 @@ const mapDispatchToProps = (dispatch) => {
     completeOrder: () => dispatch(completeOrderAction())
   }
 }
-export const BurgerContainer = connect(mapStateToProps, mapDispatchToProps)(Burger)
+const BurgerContainer = connect(mapStateToProps, mapDispatchToProps)(Burger)
+export default BurgerContainer

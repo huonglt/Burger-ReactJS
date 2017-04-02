@@ -11,4 +11,5 @@ const mapDispatchToProps = (dispatch) => {
     unselectExtra: (extraName) => dispatch(unselectExtraAction(extraName))
   }
 }
-export const SelectExtraContainer = connect(mapStateToProps, mapDispatchToProps)(SelectExtra)
+const SelectExtraContainer = connect(mapStateToProps, mapDispatchToProps)(SelectExtra)
+export default SelectExtraContainer

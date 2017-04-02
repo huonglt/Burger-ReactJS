@@ -11,4 +11,5 @@ const mapDispatchToProps = (dispatch) => {
     unselectSalad: (saladName) => dispatch(unselectSaladAction(saladName))
   }
 }
-export const SelectSaladContainer = connect(mapStateToProps, mapDispatchToProps)(SelectSalad)
+const SelectSaladContainer = connect(mapStateToProps, mapDispatchToProps)(SelectSalad)
+export default SelectSaladContainer

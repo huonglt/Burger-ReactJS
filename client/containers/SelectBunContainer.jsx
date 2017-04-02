@@ -10,4 +10,5 @@ const mapDispatchToProps = (dispatch) => {
     selectStep: (stepName) => dispatch(selectStepAction(stepName))
   }
 }
-export const SelectBunContainer = connect(mapStateToProps, mapDispatchToProps)(SelectBun)
+const SelectBunContainer = connect(mapStateToProps, mapDispatchToProps)(SelectBun)
+export default SelectBunContainer

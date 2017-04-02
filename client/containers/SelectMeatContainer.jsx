@@ -10,4 +10,5 @@ const mapDispatchToProps = (dispatch) => {
     selectMeat: (meatName) => dispatch(selectMeatAction(meatName))
   }
 }
-export const SelectMeatContainer = connect(mapStateToProps, mapDispatchToProps)(SelectMeat)
+const SelectMeatContainer = connect(mapStateToProps, mapDispatchToProps)(SelectMeat)
+export default SelectMeatContainer
