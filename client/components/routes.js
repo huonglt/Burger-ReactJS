@@ -3,13 +3,13 @@ import { Router, Route, Link, browserHistory, IndexRoute, IndexRedirect, Redirec
 import App from './App.jsx';
 import NotFound from './NotFound.jsx';
 import About from './About.jsx';
-import { BurgerContainer } from '../containers/BurgerContainer.jsx';
-import { SelectBunContainer } from '../containers/SelectBunContainer.jsx';
-import { SelectMeatContainer } from '../containers/SelectMeatContainer.jsx';
-import { SelectCheeseContainer } from '../containers/SelectCheeseContainer.jsx';
-import { SelectSaladContainer } from '../containers/SelectSaladContainer.jsx';
-import { SelectExtraContainer } from '../containers/SelectExtraContainer.jsx';
-import { CompleteOrderContainer } from '../containers/CompleteOrderContainer.jsx';
+import BurgerContainer from '../containers/BurgerContainer.jsx';
+import SelectBunContainer from '../containers/SelectBunContainer.jsx';
+import SelectMeatContainer from '../containers/SelectMeatContainer.jsx';
+import SelectCheeseContainer from '../containers/SelectCheeseContainer.jsx';
+import SelectSaladContainer from '../containers/SelectSaladContainer.jsx';
+import SelectExtraContainer from '../containers/SelectExtraContainer.jsx';
+import CompleteOrderContainer from '../containers/CompleteOrderContainer.jsx';
 
 export default (
   <Route path="/" component={App}>
