@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
-import routes from './components/routes.js';
+import routes from './components/routesWithCodeSplitting.js';
+//import routes from './components/routes.js';
 import { Router, browserHistory } from 'react-router';
 import { reducers } from './redux/reducers.js';
 import { createStore, applyMiddleware } from 'redux';
