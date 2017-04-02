@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:dev": "webpack --env=dev",
+    "build:dev": "rm -rf build && webpack --env=dev",
     "build:prod": "rm -rf dist && webpack --env=prod",
     "tests": "jest",
     "test:reducers": "jest reducers.test.js",
